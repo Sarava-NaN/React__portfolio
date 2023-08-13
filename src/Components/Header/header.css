@@ -1,0 +1,98 @@
+header {
+  height: 100vh;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+/* =========================CTA STyles(CV-resume) ======================== */
+.cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+}
+.download__icon {
+  width: 0;
+  transition: var(--transition);
+}
+.hover__btn:hover .download__icon {
+  font-size: 1.4rem;
+  width: fit-content;
+  display: inline-flex;
+  justify-content: center;
+  transform: translateX(0.1rem) translateY(0.3rem);
+}
+/* =========================HeaderSocial STyles() ======================== */
+.HeaderSocials {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+.HeaderSocials::after {
+  content: "";
+  height: 2rem;
+  width: 3px;
+  background: var(--color-primary);
+}
+/* ========================= IMAGE STyles() ======================== */
+.she {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  margin-top: 3rem;
+  border-radius: 12rem 12rem 0 0;
+  position: absolute;
+  left: calc(50% - 11rem);
+  padding: 2.5rem;
+  overflow: hidden;
+  /* Best new way to center the content by using left: calc(50% - 11rem); subtraction half of the width */
+}
+/* ========================= ScrollDown STyles() ======================== */
+
+.scroll__down {
+  position: absolute;
+  right: 0rem;
+  bottom: 6rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.apps {
+  color: var(--color-primary);
+}
+
+/*
+  ===============MEDIA
+  QUERIES
+  (MEDIUM DEVICES)===============
+  */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+  .scroll__down {
+    position: absolute;
+    right: -5rem;
+  }
+}
+
+/* ===============MEDIA QUERIES (SMALL DEVICES)=============== */
+@media screen and (max-width: 600px) {
+  header {
+    margin-bottom: 5rem;
+  }
+  .HeaderSocials,
+  .scroll__down {
+    display: none;
+  }
+}

@@ -1,0 +1,101 @@
+.experiance__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+}
+.experiance__container > div h3 {
+  margin-bottom: 3rem;
+}
+.experiance__frontend,
+.experiance__backend {
+  background: var(--color-bg-variant);
+  border: 1px groove transparent;
+  border-radius: 0.66rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.experiance__backend {
+  background-color: rgb(255, 99, 71);
+}
+.experiance__frontend:hover,
+.experiance__backend:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+.experiance__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.2rem;
+}
+.experiance__frontend::before {
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #f4b942;
+  border-left: 3px solid #65afff;
+  position: absolute;
+  transition: 1.5s ease-in-out;
+}
+.experiance__frontend::after {
+  content: "";
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-right: 3px solid #efe6dd;
+  border-top: 3px solid #4c2a85;
+  transition: 1.5s ease-in-out;
+}
+.experiance__frontend:hover::before,
+.experiance__frontend:hover::after {
+  width: 30%;
+  height: 30%;
+}
+.experiance__details {
+  transition: all 1s;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  cursor: pointer;
+}
+.experiance__details:hover {
+  background-color: #65afff;
+  border-radius: 50%;
+  transform: scale(0.9);
+}
+.experiance__details a {
+  color: #fff;
+}
+
+/* ===============MEDIA QUERIES (MEDIUM DEVICES)=============== */
+@media screen and (max-width: 1024px) {
+  .experiance__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===============MEDIA QUERIES (SMALL DEVICES)=============== */
+@media screen and (max-width: 600px) {
+  .experiance__container {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+/* ===============MEDIA QUERIES (SMALL DEVICES)=============== */
+@media screen and (max-width: 420px) {
+  .experiance__container {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    width: var(--container-width-ms);
+  }
+}
