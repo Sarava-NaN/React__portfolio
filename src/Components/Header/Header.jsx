@@ -45,18 +45,15 @@ const Header = () => {
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1 ref={StyleToName} onClick={StyleThem} style={{ cursor: "pointer" }}>
-          Kalai Selvi
+          SARAVANAN
         </h1>
         <h5 className="text-light">
           <Typewriter
             options={{
               strings: [
-                // "FRONT-END DEVELOPER",
-                // "BACKEND DEVELOPER",
-                // "UI/UX DESIGNER",
-                "GENERAL SURGEON",
-                "PLASTIC SURGEON",
-                "COSMETIC SURGEON",
+                "FRONT-END DEVELOPER",
+                "BACKEND DEVELOPER",
+                "UI/UX DESIGNER",
               ],
               autoStart: true,
               loop: true,
